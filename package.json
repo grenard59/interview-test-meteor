@@ -1,0 +1,45 @@
+{
+  "name": "interview-test",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer",
+    "lint": "eslint .",
+    "pretest": "npm run lint --silent"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.17.9",
+    "@shopify/react-web-worker": "^5.0.6",
+    "antd": "^4.23.3",
+    "chai": "^4.3.6",
+    "lodash": "^4.17.21",
+    "luxon": "^3.0.4",
+    "meteor-node-stubs": "^1.2.1",
+    "object-sizeof": "^1.6.3",
+    "prettier": "^2.7.1",
+    "react": "^17.0.2",
+    "react-addons-pure-render-mixin": "^15.6.3",
+    "react-dom": "^17.0.2",
+    "sort-keys-recursive": "^2.1.7"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.jsx",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  },
+  "devDependencies": {
+    "@meteorjs/eslint-config-meteor": "^1.0.5",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.24.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-import-resolver-meteor": "^0.4.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-meteor": "^7.3.0",
+    "eslint-plugin-react": "^7.31.8"
+  }
+}
